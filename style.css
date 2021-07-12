@@ -12,12 +12,15 @@ body{
 /* top player style*/
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     width: 920px;
     background-color: #ffffff;
     padding:30px 30px 0px 30px;
+    margin-top: 20px;
+    border-radius: 7px;
 }
 h2{
     font-size: 24px;
@@ -29,7 +32,6 @@ h2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 30px;
-    border: 1px solid seagreen;
     margin-top: 20px;
     
 }
@@ -77,4 +79,44 @@ hr{
 .blog-info a{
     text-decoration: none;
     font-size: 16px;
+}
+
+
+/* Lates Course */
+
+.coureses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.coures-info{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.coures .banner img{
+    width: 225px;
+    height: 105px;
+}
+.fas{
+    font-size: 12px;
+}
+.fa-star{
+    color: #ffc014;
+}
+.fa-star.filled{
+    color: #aeaeae;
+}
+.clock{
+    background-color: rgb(245, 160, 145);
+    border-radius: 20px;
+    width: 120px;
+    height: 25px;
+}
+.fa-clock{
+    padding: 5px;
+    color: rgb(218, 94, 72);
+}
+.time{
+    padding: 5px;
+    color: rgb(190, 60, 60);
 }
