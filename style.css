@@ -9,6 +9,49 @@ body{
     box-sizing: border-box;
     background-color:#f3f1f1;
 }
+
+/*-------------------
+    Header Area
+------------------- */
+
+header{
+    background-color: #562eff;
+}
+.header-area{
+    width: 980px;
+    margin:auto;
+
+}
+.header-content{
+    display: flex;
+    justify-content: space-between; 
+    padding: 25px 0;
+
+}
+.menu-area{
+    display: flex;
+    align-items: center;
+    
+}
+
+ .menu-area img{
+    width: 40px;
+    height: 45px;
+    margin-right: 5px;
+}
+.menu-area a{
+    margin-right: 30px;
+    color: #fff;
+    text-decoration: none;
+    
+}
+.idea{
+    color:#ffffff;
+    margin-left: 20px;
+    margin-top: 25px;
+    font-size: 22px;
+}
+
 /* top player style*/
 main{
     display: flex;
@@ -36,7 +79,7 @@ h2{
     
 }
 .player{
-    display: flex;/* player er vitore ja kisu thakbe sobi flex hoa jabe */
+    display: flex;
     align-items: center;
 }
 .player img{
@@ -84,16 +127,17 @@ hr{
 
 /* Lates Course */
 
-.coureses{
+.courses{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
 }
-.coures-info{
+.course-info{
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
 }
-.coures .banner img{
+.course .banner img{
     width: 225px;
     height: 105px;
 }
@@ -109,8 +153,7 @@ hr{
 .clock{
     background-color: rgb(245, 160, 145);
     border-radius: 20px;
-    width: 120px;
-    height: 25px;
+   
 }
 .fa-clock{
     padding: 5px;
@@ -120,3 +163,53 @@ hr{
     padding: 5px;
     color: rgb(190, 60, 60);
 }
+
+/*-------------------------
+      Media Quer
+ -------------------------*/
+ /* Mobile Screen */
+ @media only screen and (max-width:688px){
+     .container{
+         width: 100%;
+     }
+     .players, .blogs, .courses{
+         grid-template-columns: repeat(1, 1fr) ;
+        
+     }
+     .header-area{
+        width: 100%;
+    }
+     .player, .blog, .course, .header-content{
+         flex-direction: column;
+         align-items: center;
+     }
+     
+ }
+
+ /* Taplat divice */
+ @media only screen and (min-width:689px) and (max-width:991px) {
+     .container{
+         width: 100%;
+     }
+     .players, .courses{
+         grid-template-columns: repeat(2, 1fr);
+     }
+     .blogs{
+         grid-template-columns: repeat(1, 1fr);
+     }
+     .blog{
+
+        justify-content: center;
+         align-items: center;
+     }
+     .header-area{
+         width: 100%;
+     }
+     .header-content{
+         flex-direction:column ;
+         align-items: center;
+     }
+     /* .menu-area{
+         flex-direction: column;
+     } */
+ }
